@@ -1,0 +1,25 @@
+[repository]
+ROOT = /data/git/gogs-repositories
+
+[server]
+PROTOCOL = https
+DOMAIN   = {{getenv "GOGS_DOMAIN"}}
+ROOT_URL = {{getenv "GOGS_ROOT_URL"}}
+SSH_PORT = {{getenv "GOGS_SSH_PORT"}}
+
+[database]
+DB_TYPE  = postgres
+HOST     = db:5432
+USER     = gogs
+PASSWD   = gogs
+
+[security]
+INSTALL_LOCK = true
+REVERSE_PROXY_AUTHENTICATION_USER = X-Forwarded-User
+
+[service]
+ENABLE_REVERSE_PROXY_AUTHENTICATION = true
+ENABLE_REVERSE_PROXY_AUTO_REGISTRATION = true
+
+[log]
+LEVEL = Info
