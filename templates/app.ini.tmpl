@@ -21,11 +21,12 @@ ENABLE_REVERSE_PROXY_AUTHENTICATION = true
 ENABLE_REVERSE_PROXY_AUTO_REGISTRATION = true
 
 [mailer]
-ENABLED = {{getenv "GOGS_MAILER_ENABLED"}}
-FROM    = {{getenv "GOGS_MAILER_FROM"}}
-HOST    = {{getenv "GOGS_MAILER_HOST"}}
-USER    = {{getenv "GOGS_MAILER_USER"}}
-PASSWD  = {{getenv "GOGS_MAILER_PASSWD"}}
+ENABLED      = {{getenv "GOGS_MAILER_ENABLED"}}
+FROM         = {{getenv "GOGS_MAILER_FROM"}}
+HOST         = {{getenv "GOGS_MAILER_HOST"}}
+USER         = {{getenv "GOGS_MAILER_USER"}}
+PASSWD       = {{getenv "GOGS_MAILER_PASSWD"}}
+SKIP_VERIFY  = {{getenv "GOGS_MAILER_SKIP_VERIFY"}}
 
 [log]
 LEVEL = Info
