@@ -2,9 +2,9 @@
 ROOT = /data/git/gogs-repositories
 
 [server]
-DOMAIN   = {{getenv "GOGS_DOMAIN"}}
-ROOT_URL = {{getenv "GOGS_ROOT_URL"}}
-SSH_PORT = {{getenv "GOGS_SSH_PORT"}}
+DOMAIN   = {{getenv "GOGS_SERVER_DOMAIN"}}
+ROOT_URL = {{getenv "GOGS_SERVER_ROOT_URL"}}
+SSH_PORT = {{getenv "GOGS_SERVER_SSH_PORT"}}
 
 [database]
 DB_TYPE  = postgres
