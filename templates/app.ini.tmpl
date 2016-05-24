@@ -26,8 +26,10 @@ ENABLE_REVERSE_PROXY_AUTHENTICATION     = true
 ENABLE_REVERSE_PROXY_AUTO_REGISTRATION  = true
 {{if not ( eq ( getenv "GOGS_SERVICE_DISABLE_REGISTRATION" ) "" ) }}
 SHOW_REGISTRATION_BUTTON                = false
+DISABLE_REGISTRATION                    = true
 {{else}}
 SHOW_REGISTRATION_BUTTON                = true
+DISABLE_REGISTRATION                    = false
 {{end}}
 
 [mailer]
