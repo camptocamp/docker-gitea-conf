@@ -18,8 +18,17 @@ REVERSE_PROXY_AUTHENTICATION_USER = X-Forwarded-User
 
 [service]
 ENABLE_NOTIFY_MAIL                      = {{getenv "GOGS_SERVICE_ENABLE_NOTIFY_MAIL"}}
+{{if not ( eq ( getenv "GOGS_SERVICE_DISABLE_REVERSE_PROXY_AUTHENTICATION" ) "" ) }}
+ENABLE_REVERSE_PROXY_AUTHENTICATION     = false
+{{else}}
 ENABLE_REVERSE_PROXY_AUTHENTICATION     = true
+{{end}}
 ENABLE_REVERSE_PROXY_AUTO_REGISTRATION  = true
+{{if not ( eq ( getenv "GOGS_SERVICE_DISABLE_REGISTRATION" ) "" ) }}
+SHOW_REGISTRATION_BUTTON                = false
+{{else}}
+SHOW_REGISTRATION_BUTTON                = true
+{{end}}
 
 [mailer]
 ENABLED      = {{getenv "GOGS_MAILER_ENABLED"}}
